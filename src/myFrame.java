@@ -53,6 +53,5 @@ public class myFrame extends JFrame
 	}
 	
 	public static myFrame getFrame()	{ return frame; }
-	
 }
 
