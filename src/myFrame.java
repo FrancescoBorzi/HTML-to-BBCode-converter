@@ -9,7 +9,6 @@ public class myFrame extends JFrame
 	private JMenu File = new JMenu();
 	private JMenu Tools = new JMenu();
 
-
 	// File
 	private JMenuItem ImportHTML = new JMenuItem();
 	private JMenuItem ImportBBCode = new JMenuItem();
@@ -19,9 +18,10 @@ public class myFrame extends JFrame
 
 	// Tools
 	private JMenuItem Palette = new JMenuItem();
-	
+
 	// TextArea
 	private JTextArea TextArea = new JTextArea();
+	private JScrollPane Scroll = new JScrollPane(TextArea);
 
 	private myFrame()	{ initFrame(); }
 	private void initFrame()
@@ -53,10 +53,8 @@ public class myFrame extends JFrame
 				System.exit(0);
 			}
 		});
-		
-		TextArea.setColumns(20);
-		TextArea.setRows(5);
 
+		TextArea.setLineWrap(true);
 
 		this.setJMenuBar(myMenuBar);
 
@@ -69,9 +67,9 @@ public class myFrame extends JFrame
 		File.add(SaveBBCode);
 		File.add(Exit);
 
-		this.add(TextArea);
+		this.add(Scroll);
 	}
-	
+
 	public static myFrame getFrame()	{ return frame; }
 }
 
