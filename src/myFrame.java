@@ -40,6 +40,14 @@ public class myFrame extends JFrame
 		SaveBBCode.setText("Save BBCode");
 		Exit.setText("Exit");
 		
+		Exit.addActionListener(new java.awt.event.ActionListener()
+		{
+			public void actionPerformed(java.awt.event.ActionEvent evt)
+			{
+				System.exit(0);
+			}
+		});
+
 		this.setJMenuBar(myMenuBar);
 		
 		myMenuBar.add(File);
