@@ -19,6 +19,20 @@ public class myFrame extends JFrame
 	// Tools
 	private JMenuItem Palette = new JMenuItem();
 	
+	// Panels
+	private JPanel panelHTMLbuttons = new JPanel();
+	private JPanel panelBBCodebuttons = new JPanel();
+	
+	// Texts
+	private JTextArea textHTML = new JTextArea(10, 10);
+	private JTextArea textBBCode = new JTextArea(10, 10);
+	
+	// Buttons
+	private JButton check1 = new JButton("Check code");
+	private JButton check2 = new JButton("Check code");
+	private JButton convert1 = new JButton("Convert to BBCode");
+	private JButton convert2 = new JButton("Convert to HTML");
+	
 	private myFrame()	{ initFrame(); }
 	private void initFrame()
 	{
@@ -39,8 +53,16 @@ public class myFrame extends JFrame
 		SaveHTML.setText("Save HTML");
 		SaveBBCode.setText("Save BBCode");
 		Exit.setText("Exit");
+		Palette.setText("Palette");
 		
 		this.setJMenuBar(myMenuBar);
+		this.add(panelHTMLbuttons, BorderLayout.LINE_START);
+		this.add(panelBBCodebuttons, BorderLayout.LINE_END);
+		
+		panelHTMLbuttons.add(check1);
+		panelHTMLbuttons.add(convert1);
+		panelBBCodebuttons.add(check2);
+		panelBBCodebuttons.add(convert2);
 		
 		myMenuBar.add(File);
 		myMenuBar.add(Tools);
@@ -50,6 +72,8 @@ public class myFrame extends JFrame
 		File.add(SaveHTML);
 		File.add(SaveBBCode);
 		File.add(Exit);
+		
+		Tools.add(Palette);
 	}
 	
 	public static myFrame getFrame()	{ return frame; }
