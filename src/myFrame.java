@@ -5,7 +5,7 @@ public class myFrame extends JFrame
 {
 	public static myFrame frame = new myFrame();
 	private JMenuBar myMenuBar = new JMenuBar();
-	
+
 	private JMenu File = new JMenu();
 	private JMenu Tools = new JMenu();
 
@@ -15,9 +15,10 @@ public class myFrame extends JFrame
 	private JMenuItem SaveHTML = new JMenuItem();
 	private JMenuItem SaveBBCode = new JMenuItem();
 	private JMenuItem Exit = new JMenuItem();
-	
+
 	// Tools
 	private JMenuItem Palette = new JMenuItem();
+<<<<<<< HEAD
 	
 	// Panels
 	private JPanel panelHTMLbuttons = new JPanel();
@@ -33,26 +34,34 @@ public class myFrame extends JFrame
 	private JButton convert1 = new JButton("Convert to BBCode");
 	private JButton convert2 = new JButton("Convert to HTML");
 	
+=======
+
+	// TextArea
+	private JTextArea TextArea = new JTextArea();
+	private JScrollPane Scroll = new JScrollPane(TextArea);
+
+>>>>>>> 3a2dd4f6edc2736877f2972378a3d3dba38f731b
 	private myFrame()	{ initFrame(); }
 	private void initFrame()
 	{
 		Toolkit myKit=Toolkit.getDefaultToolkit();
 		Dimension myScreenSize = myKit.getScreenSize();
-		
+
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setTitle("HTML-BBCode converter");
 		this.setVisible(true);
 		this.setSize(myScreenSize.width/2, myScreenSize.height/2);
 		this.setLocation(myScreenSize.width/4, myScreenSize.height/4);
-		
+
 		File.setText("File");
 		Tools.setText("Tools");
-		
+
 		ImportHTML.setText("Import HTML..");
 		ImportBBCode.setText("Import BBCode..");
 		SaveHTML.setText("Save HTML");
 		SaveBBCode.setText("Save BBCode");
 		Exit.setText("Exit");
+<<<<<<< HEAD
 		Palette.setText("Palette");
 		
 		this.setJMenuBar(myMenuBar);
@@ -64,18 +73,40 @@ public class myFrame extends JFrame
 		panelBBCodebuttons.add(check2);
 		panelBBCodebuttons.add(convert2);
 		
+=======
+
+		Exit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
+		Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit.png")));
+		Exit.addActionListener(new java.awt.event.ActionListener()
+		{
+			public void actionPerformed(java.awt.event.ActionEvent evt)
+			{
+				System.exit(0);
+			}
+		});
+
+		TextArea.setLineWrap(true);
+
+		this.setJMenuBar(myMenuBar);
+
+>>>>>>> 3a2dd4f6edc2736877f2972378a3d3dba38f731b
 		myMenuBar.add(File);
 		myMenuBar.add(Tools);
-		
+
 		File.add(ImportHTML);
 		File.add(ImportBBCode);
 		File.add(SaveHTML);
 		File.add(SaveBBCode);
 		File.add(Exit);
+<<<<<<< HEAD
 		
 		Tools.add(Palette);
+=======
+
+		this.add(Scroll);
+>>>>>>> 3a2dd4f6edc2736877f2972378a3d3dba38f731b
 	}
-	
+
 	public static myFrame getFrame()	{ return frame; }
 }
 
