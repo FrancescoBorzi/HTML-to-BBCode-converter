@@ -1,7 +1,9 @@
 import java.awt.*;
 import javax.swing.*;
+import java.util.*;
 
-public class myFrame extends javax.swing.JFrame {
+public class myFrame extends javax.swing.JFrame implements Observer
+{
 
     private static myFrame frame = new myFrame();
     
@@ -18,6 +20,45 @@ public class myFrame extends javax.swing.JFrame {
     private JMenuItem SaveBBCode = new JMenuItem();
     private JMenuItem Exit = new JMenuItem();
     private JMenuItem Palette = new JMenuItem();
+    
+    public void update(Observable s, Object c)
+    {
+        // debug
+        System.exit(0);
+        
+        if (s instanceof MenuListener)
+        {
+            if (c == ImportHTML)
+            {
+                
+            }
+            else if (c == ImportBBCode)
+            {
+                
+            }
+            else if (c == SaveHTML)
+            {
+                
+            }
+            else if (c == SaveBBCode)
+            {
+                
+            }
+            else if (c == Exit)
+            {
+                System.exit(0);
+            }
+            else if (c == Palette)
+            {
+                
+            }
+        }
+        /*else if (s instanceof KeyboardListener)
+        {
+            TO DO: KeyboardListener
+        }*/
+            
+    }
     
     public static myFrame getFrame()
     {
@@ -47,6 +88,15 @@ public class myFrame extends javax.swing.JFrame {
         Exit.setText("Exit");
 
         Palette.setText("Palette");
+        
+        
+        ImportHTML.addActionListener(MenuListener.getMenuListener());
+        ImportBBCode.addActionListener(MenuListener.getMenuListener());
+        SaveHTML.addActionListener(MenuListener.getMenuListener());
+        SaveBBCode.addActionListener(MenuListener.getMenuListener());
+        Exit.addActionListener(MenuListener.getMenuListener());
+
+        Palette.addActionListener(MenuListener.getMenuListener());
     }
     
     private myFrame()
