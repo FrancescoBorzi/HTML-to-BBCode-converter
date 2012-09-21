@@ -1,16 +1,65 @@
+import java.awt.*;
+import javax.swing.*;
+
 public class myFrame extends javax.swing.JFrame {
 
     private static myFrame frame = new myFrame();
+    
+    Toolkit myKit=Toolkit.getDefaultToolkit();
+    Dimension myScreenSize = myKit.getScreenSize();
+    
+    // Menu Bar variables
+    private JMenuBar myMenuBar = new JMenuBar();
+    private JMenu File = new JMenu();
+    private JMenu Tools = new JMenu();
+    private JMenuItem ImportHTML = new JMenuItem();
+    private JMenuItem ImportBBCode = new JMenuItem();
+    private JMenuItem SaveHTML = new JMenuItem();
+    private JMenuItem SaveBBCode = new JMenuItem();
+    private JMenuItem Exit = new JMenuItem();
+    private JMenuItem Palette = new JMenuItem();
     
     public static myFrame getFrame()
     {
         return frame;
     }
     
+    private void initMenu()
+    {	
+        myMenuBar.add(File);
+        myMenuBar.add(Tools);
+        
+        File.add(ImportHTML);
+        File.add(ImportBBCode);
+        File.add(SaveHTML);
+        File.add(SaveBBCode);
+        File.add(Exit);
+
+        Tools.add(Palette);
+        
+        File.setText("File");
+        Tools.setText("Tools");
+  
+        ImportHTML.setText("Import HTML..");
+        ImportBBCode.setText("Import BBCode..");
+        SaveHTML.setText("Save HTML");
+        SaveBBCode.setText("Save BBCode");
+        Exit.setText("Exit");
+
+        Palette.setText("Palette");
+    }
+    
     private myFrame()
     {
         initComponents();
+        initMenu();
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
+        this.setTitle("HTML-BBCode converter");
+        this.setVisible(true);
+        this.setSize(myScreenSize.width/2, myScreenSize.height/2);
+        this.setLocation(myScreenSize.width/4, myScreenSize.height/4);
+        this.setJMenuBar(myMenuBar);
     }
 
     @SuppressWarnings("unchecked")
