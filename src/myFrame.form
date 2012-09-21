@@ -63,7 +63,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="convert1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Clear" min="-2" max="-2" attributes="0"/>
+                          <Component id="clear1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -82,7 +82,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="check1" alignment="3" max="32767" attributes="0"/>
-                      <Component id="Clear" alignment="3" max="32767" attributes="0"/>
+                      <Component id="clear1" alignment="3" max="32767" attributes="0"/>
                       <Component id="convert1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -129,12 +129,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="Clear">
+        <Component class="javax.swing.JButton" name="clear1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Clear"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClearActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clear1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -157,7 +157,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="convert2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Clear2" min="-2" max="-2" attributes="0"/>
+                          <Component id="clear2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -183,7 +183,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="check2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="convert2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Clear2" alignment="3" max="32767" attributes="0"/>
+                      <Component id="clear2" alignment="3" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="246" max="-2" attributes="0"/>
@@ -234,10 +234,13 @@
             <Property name="text" type="java.lang.String" value="Clear"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Clear2">
+        <Component class="javax.swing.JButton" name="clear2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Clear"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clear2ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

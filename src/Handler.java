@@ -2,11 +2,17 @@ public interface Handler
 {
     public void convert();
     public void check();
-    public void clear();
 }
 
 class HTML implements Handler
 {
+    private static HTML myHandler = new HTML();
+    
+    public static HTML getHandler()
+    {
+        return myHandler;
+    }
+    
     public void convert()
     {
         // to do: convert code to BBCode language and print the output on the other textArea
@@ -16,15 +22,17 @@ class HTML implements Handler
     {
         // to do: check for code errors
     }
-    
-    public void clear()
-    {
-        // to do: clear textArea
-    }
 }
 
 class BBCode implements Handler
 {
+    private static BBCode myHandler = new BBCode();
+    
+    public static BBCode getHandler()
+    {
+        return myHandler;
+    }
+    
     public void convert()
     {
         // to do: convert code to HTML language and print the output on the other textArea
@@ -35,13 +43,22 @@ class BBCode implements Handler
         // to do: check for code errors
     }
     
-    public void clear()
-    {
-        // to do: clear textArea
-    }
 }
 
 class Context
 {
-    Handler codeHandler;
+    private static HTML handlerOfHTML = HTML.getHandler();
+    private static BBCode handlerOfBBcode = BBCode.getHandler();
+    private static Context myContex = new Context();
+    
+    private static HTML getHTML()
+    {
+        return handlerOfHTML;
+    }
+    
+    private static BBCode getBBcode()
+    {
+        return handlerOfBBcode;
+    }
+    
 }

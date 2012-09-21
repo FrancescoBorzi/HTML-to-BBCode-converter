@@ -73,7 +73,7 @@ public class myFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        Clear = new javax.swing.JButton();
+        clear1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         convert2 = new javax.swing.JButton();
         check2 = new javax.swing.JButton();
@@ -81,7 +81,7 @@ public class myFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         Clear1 = new javax.swing.JButton();
-        Clear2 = new javax.swing.JButton();
+        clear2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,10 +105,10 @@ public class myFrame extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        Clear.setText("Clear");
-        Clear.addActionListener(new java.awt.event.ActionListener() {
+        clear1.setText("Clear");
+        clear1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ClearActionPerformed(evt);
+                clear1ActionPerformed(evt);
             }
         });
 
@@ -128,7 +128,7 @@ public class myFrame extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(convert1)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(Clear)
+                        .add(clear1)
                         .add(157, 157, 157))))
             .add(jPanel1Layout.createSequentialGroup()
                 .add(126, 126, 126)
@@ -142,7 +142,7 @@ public class myFrame extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(check1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(Clear, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(clear1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(convert1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 247, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -171,7 +171,12 @@ public class myFrame extends javax.swing.JFrame {
 
         Clear1.setText("Clear");
 
-        Clear2.setText("Clear");
+        clear2.setText("Clear");
+        clear2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clear2ActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -189,7 +194,7 @@ public class myFrame extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(convert2)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(Clear2)
+                        .add(clear2)
                         .add(175, 175, 175)))
                 .add(Clear1))
             .add(jPanel2Layout.createSequentialGroup()
@@ -209,7 +214,7 @@ public class myFrame extends javax.swing.JFrame {
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(check2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 29, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(convert2)
-                    .add(Clear2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(clear2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 246, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(72, 72, 72))
@@ -255,9 +260,13 @@ public class myFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_convert1ActionPerformed
 
-    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
+    private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ClearActionPerformed
+    }//GEN-LAST:event_clear1ActionPerformed
+
+    private void clear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clear2ActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -291,11 +300,11 @@ public class myFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Clear;
     private javax.swing.JButton Clear1;
-    private javax.swing.JButton Clear2;
     private javax.swing.JButton check1;
     private javax.swing.JButton check2;
+    private javax.swing.JButton clear1;
+    private javax.swing.JButton clear2;
     private javax.swing.JButton convert1;
     private javax.swing.JButton convert2;
     private javax.swing.JLabel jLabel1;
