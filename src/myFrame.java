@@ -295,20 +295,22 @@ public class myFrame extends javax.swing.JFrame implements Observer
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public Context ContextHandler = Context.getContextHandler();
+    
     private void check1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check1ActionPerformed
-        // TODO add your handling code here:
+        HTMLTextArea.setText(ContextHandler.getHTML().check(HTMLTextArea.getText()));
     }//GEN-LAST:event_check1ActionPerformed
 
     private void convert2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convert2ActionPerformed
-        // TODO add your handling code here:
+        HTMLTextArea.setText(ContextHandler.getBBCode().convert(BBCodeTextArea.getText()));
     }//GEN-LAST:event_convert2ActionPerformed
 
     private void check2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check2ActionPerformed
-        // TODO add your handling code here:
+        BBCodeTextArea.setText(ContextHandler.getBBCode().check(BBCodeTextArea.getText()));
     }//GEN-LAST:event_check2ActionPerformed
 
     private void convert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convert1ActionPerformed
-        // TODO add your handling code here:
+        BBCodeTextArea.setText(ContextHandler.getHTML().convert(HTMLTextArea.getText()));
     }//GEN-LAST:event_convert1ActionPerformed
 
     private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed

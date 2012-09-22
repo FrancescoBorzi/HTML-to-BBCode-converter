@@ -1,7 +1,7 @@
 public interface Handler
 {
-    public void convert();
-    public void check();
+    public String convert(String input);
+    public String check(String input);
 }
 
 class HTML implements Handler
@@ -13,14 +13,14 @@ class HTML implements Handler
         return myHandler;
     }
     
-    public void convert()
+    public String convert(String input)
     {
-        // to do: convert code to BBCode language and print the output on the other textArea
+        return "TO DO";
     }
     
-    public void check()
+    public String check(String input)
     {
-        // to do: check for code errors
+        return "TO DO";
     }
 }
 
@@ -33,14 +33,14 @@ class BBCode implements Handler
         return myHandler;
     }
     
-    public void convert()
+    public String convert(String input)
     {
-        // to do: convert code to HTML language and print the output on the other textArea
+        return "TO DO";
     }
     
-    public void check()
+    public String check(String input)
     {
-        // to do: check for code errors
+        return "TO DO";
     }
     
 }
@@ -49,14 +49,19 @@ class Context
 {
     private static HTML handlerOfHTML = HTML.getHandler();
     private static BBCode handlerOfBBcode = BBCode.getHandler();
-    private static Context myContex = new Context();
+    private static Context myContext = new Context();
     
-    private static HTML getHTML()
+    public static Context getContextHandler()
+    {
+        return myContext;
+    }
+    
+    public static HTML getHTML()
     {
         return handlerOfHTML;
     }
     
-    private static BBCode getBBcode()
+    public static BBCode getBBCode()
     {
         return handlerOfBBcode;
     }
