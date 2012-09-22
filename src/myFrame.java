@@ -118,19 +118,19 @@ public class myFrame extends javax.swing.JFrame implements Observer
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        HTMLPanel = new javax.swing.JPanel();
         convert1 = new javax.swing.JButton();
         check1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        HTMLLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        HTMLTextArea = new javax.swing.JTextArea();
         clear1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        BBCodePanel = new javax.swing.JPanel();
         convert2 = new javax.swing.JButton();
         check2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        BBCodeLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        BBCodeTextArea = new javax.swing.JTextArea();
         Clear1 = new javax.swing.JButton();
         clear2 = new javax.swing.JButton();
 
@@ -150,11 +150,11 @@ public class myFrame extends javax.swing.JFrame implements Observer
             }
         });
 
-        jLabel1.setText("HTML");
+        HTMLLabel.setText("HTML");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        HTMLTextArea.setColumns(20);
+        HTMLTextArea.setRows(5);
+        jScrollPane1.setViewportView(HTMLTextArea);
 
         clear1.setText("Clear");
         clear1.addActionListener(new java.awt.event.ActionListener() {
@@ -163,35 +163,35 @@ public class myFrame extends javax.swing.JFrame implements Observer
             }
         });
 
-        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
+        org.jdesktop.layout.GroupLayout HTMLPanelLayout = new org.jdesktop.layout.GroupLayout(HTMLPanel);
+        HTMLPanel.setLayout(HTMLPanelLayout);
+        HTMLPanelLayout.setHorizontalGroup(
+            HTMLPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(HTMLPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel1Layout.createSequentialGroup()
+                .add(HTMLPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(HTMLPanelLayout.createSequentialGroup()
                         .add(6, 6, 6)
                         .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 253, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
-                    .add(jPanel1Layout.createSequentialGroup()
+                    .add(HTMLPanelLayout.createSequentialGroup()
                         .add(check1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(convert1)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(clear1)
                         .add(157, 157, 157))))
-            .add(jPanel1Layout.createSequentialGroup()
+            .add(HTMLPanelLayout.createSequentialGroup()
                 .add(126, 126, 126)
-                .add(jLabel1)
+                .add(HTMLLabel)
                 .add(0, 0, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
-                .add(jLabel1)
+        HTMLPanelLayout.setVerticalGroup(
+            HTMLPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(HTMLPanelLayout.createSequentialGroup()
+                .add(HTMLLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(HTMLPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(check1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(clear1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(convert1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -214,11 +214,11 @@ public class myFrame extends javax.swing.JFrame implements Observer
             }
         });
 
-        jLabel2.setText("BBCode");
+        BBCodeLabel.setText("BBCode");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        BBCodeTextArea.setColumns(20);
+        BBCodeTextArea.setRows(5);
+        jScrollPane2.setViewportView(BBCodeTextArea);
 
         Clear1.setText("Clear");
 
@@ -229,17 +229,17 @@ public class myFrame extends javax.swing.JFrame implements Observer
             }
         });
 
-        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
-                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel2Layout.createSequentialGroup()
+        org.jdesktop.layout.GroupLayout BBCodePanelLayout = new org.jdesktop.layout.GroupLayout(BBCodePanel);
+        BBCodePanel.setLayout(BBCodePanelLayout);
+        BBCodePanelLayout.setHorizontalGroup(
+            BBCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(BBCodePanelLayout.createSequentialGroup()
+                .add(BBCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(BBCodePanelLayout.createSequentialGroup()
                         .add(112, 112, 112)
-                        .add(jLabel2)
+                        .add(BBCodeLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, BBCodePanelLayout.createSequentialGroup()
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(check2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 77, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -248,21 +248,21 @@ public class myFrame extends javax.swing.JFrame implements Observer
                         .add(clear2)
                         .add(175, 175, 175)))
                 .add(Clear1))
-            .add(jPanel2Layout.createSequentialGroup()
+            .add(BBCodePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 252, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
+        BBCodePanelLayout.setVerticalGroup(
+            BBCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(BBCodePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(Clear1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(341, 341, 341))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
-                .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, BBCodePanelLayout.createSequentialGroup()
+                .add(BBCodeLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(BBCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(check2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 29, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(convert2)
                     .add(clear2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -277,9 +277,9 @@ public class myFrame extends javax.swing.JFrame implements Observer
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 287, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(HTMLPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 287, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 280, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(BBCodePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 280, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(332, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -287,8 +287,8 @@ public class myFrame extends javax.swing.JFrame implements Observer
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 326, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(BBCodePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 326, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(HTMLPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
 
@@ -312,11 +312,11 @@ public class myFrame extends javax.swing.JFrame implements Observer
     }//GEN-LAST:event_convert1ActionPerformed
 
     private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed
-        // TODO add your handling code here:
+        HTMLTextArea.setText("");
     }//GEN-LAST:event_clear1ActionPerformed
 
     private void clear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear2ActionPerformed
-        // TODO add your handling code here:
+        BBCodeTextArea.setText("");
     }//GEN-LAST:event_clear2ActionPerformed
 
     public static void main(String args[]) {
@@ -351,20 +351,20 @@ public class myFrame extends javax.swing.JFrame implements Observer
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BBCodeLabel;
+    private javax.swing.JPanel BBCodePanel;
+    private javax.swing.JTextArea BBCodeTextArea;
     private javax.swing.JButton Clear1;
+    private javax.swing.JLabel HTMLLabel;
+    private javax.swing.JPanel HTMLPanel;
+    private javax.swing.JTextArea HTMLTextArea;
     private javax.swing.JButton check1;
     private javax.swing.JButton check2;
     private javax.swing.JButton clear1;
     private javax.swing.JButton clear2;
     private javax.swing.JButton convert1;
     private javax.swing.JButton convert2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }
