@@ -1,6 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 import java.util.*;
+import java.awt.event.*;
 
 public class myFrame extends javax.swing.JFrame implements Observer
 {
@@ -25,30 +26,29 @@ public class myFrame extends javax.swing.JFrame implements Observer
     {   
         if (s instanceof MenuListener)
         {
-            // debug
-            System.exit(0);
+            ActionEvent ae = (ActionEvent)c;
             
-            if (c == ImportHTML)
+            if (ae.getActionCommand().compareTo(ImportHTML.getLabel()) == 0)
+            {
+
+            }
+            else if (ae.getActionCommand().compareTo(ImportBBCode.getLabel()) == 0)
             {
                 
             }
-            else if (c == ImportBBCode)
+            else if (ae.getActionCommand().compareTo(SaveHTML.getLabel()) == 0)
             {
                 
             }
-            else if (c == SaveHTML)
+            else if (ae.getActionCommand().compareTo(SaveBBCode.getLabel()) == 0)
             {
                 
             }
-            else if (c == SaveBBCode)
-            {
-                
-            }
-            else if (c == Exit)
+            else if (ae.getActionCommand().compareTo(Exit.getLabel()) == 0)
             {
                 System.exit(0);
             }
-            else if (c == Palette)
+            else if (ae.getActionCommand().compareTo(Palette.getLabel()) == 0)
             {
                 
             }
