@@ -4,17 +4,10 @@ import java.util.*;
 
 public class MenuListener extends Observable implements ActionListener
 {
-    private static MenuListener myMenuListener = new MenuListener();
     
-    public MenuListener()
+    public MenuListener(Observer o)
     {
-        // mi da nullPointerException qui
-        this.addObserver(myFrame.getFrame());
-    }
-
-    public static MenuListener getMenuListener()
-    {
-        return myMenuListener;
+        addObserver(o);
     }
 
     public void actionPerformed(ActionEvent e)

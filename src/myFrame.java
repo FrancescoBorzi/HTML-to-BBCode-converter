@@ -22,12 +22,12 @@ public class myFrame extends javax.swing.JFrame implements Observer
     private JMenuItem Palette = new JMenuItem();
     
     public void update(Observable s, Object c)
-    {
-        // debug
-        System.exit(0);
-        
+    {   
         if (s instanceof MenuListener)
         {
+            // debug
+            System.exit(0);
+            
             if (c == ImportHTML)
             {
                 
@@ -89,14 +89,15 @@ public class myFrame extends javax.swing.JFrame implements Observer
 
         Palette.setText("Palette");
         
+        MenuListener myMenuListener = new MenuListener(this);
         
-        ImportHTML.addActionListener(MenuListener.getMenuListener());
-        ImportBBCode.addActionListener(MenuListener.getMenuListener());
-        SaveHTML.addActionListener(MenuListener.getMenuListener());
-        SaveBBCode.addActionListener(MenuListener.getMenuListener());
-        Exit.addActionListener(MenuListener.getMenuListener());
+        ImportHTML.addActionListener(myMenuListener);
+        ImportBBCode.addActionListener(myMenuListener);
+        SaveHTML.addActionListener(myMenuListener);
+        SaveBBCode.addActionListener(myMenuListener);
+        Exit.addActionListener(myMenuListener);
 
-        Palette.addActionListener(MenuListener.getMenuListener());
+        Palette.addActionListener(myMenuListener);
     }
     
     private myFrame()
