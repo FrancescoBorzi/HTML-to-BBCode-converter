@@ -72,7 +72,7 @@ public class myMaps
         // links & mails
         htmlMap.put("<a href='mailto:(.+?)'>(.+?)</a>", "\\[email=$1\\]$2\\[/email\\]");;
         htmlMap.put("<a href=\"mailto:(.+?)\">(.+?)</a>", "\\[email=$1\\]$2\\[/email\\]");;
-        htmlMap.put("<a href='(.+?)'>(.+?)</a>", "\\[url=$1\"\\]$2\\[/url\\]");
+        htmlMap.put("<a href='(.+?)'>(.+?)</a>", "\\[url=$1\\]$2\\[/url\\]");
         htmlMap.put("<a href=\"(.+?)\">(.+?)</a>", "\\[url=$1\"\\]$2\\[/url\\]");
         
         // videos
