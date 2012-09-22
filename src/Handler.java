@@ -1,3 +1,5 @@
+import java.util.*;
+
 public interface Handler
 {
     public String convert(String input);
@@ -15,7 +17,13 @@ class HTML implements Handler
     
     public String convert(String input)
     {
-        return "TO DO";
+        String bbcode = input;
+
+        for (Map.Entry entry: myMaps.getHTMLMap().entrySet()) {
+            bbcode = bbcode.replaceAll(entry.getKey().toString(), entry.getValue().toString());
+        }
+
+        return bbcode;
     }
     
     public String check(String input)
@@ -35,7 +43,14 @@ class BBCode implements Handler
     
     public String convert(String input)
     {
-        return "TO DO";
+        String html = input;
+
+        for (Map.Entry entry: myMaps.getBBcodeMap().entrySet()) {
+            html = html.replaceAll(entry.getKey().toString(), entry.getValue().toString());
+        }
+
+        return html;
+
     }
     
     public String check(String input)
