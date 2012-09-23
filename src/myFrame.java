@@ -50,7 +50,7 @@ public class myFrame extends javax.swing.JFrame implements Observer
             }
             else if (ae.getActionCommand().compareTo(Palette.getLabel()) == 0)
             {
-                
+                myPalette newPalette = new myPalette();
             }
         }
         /*else if (s instanceof KeyboardListener)
@@ -108,10 +108,10 @@ public class myFrame extends javax.swing.JFrame implements Observer
         this.setVisible(true);
         this.setResizable(false);
         this.setTitle("HTML-BBCode converter");
-        this.setVisible(true);
         this.setSize(myScreenSize.width/2, myScreenSize.height/2);
         this.setLocation(myScreenSize.width/4, myScreenSize.height/4);
         this.setJMenuBar(myMenuBar);
+        this.setVisible(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -298,7 +298,7 @@ public class myFrame extends javax.swing.JFrame implements Observer
     public Context ContextHandler = Context.getContextHandler();
     
     private void check1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check1ActionPerformed
-        HTMLTextArea.setText(ContextHandler.getHTML().check(HTMLTextArea.getText()));
+        ContextHandler.getHTML().check(HTMLTextArea.getText());
     }//GEN-LAST:event_check1ActionPerformed
 
     private void convert2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convert2ActionPerformed
@@ -306,7 +306,7 @@ public class myFrame extends javax.swing.JFrame implements Observer
     }//GEN-LAST:event_convert2ActionPerformed
 
     private void check2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check2ActionPerformed
-        BBCodeTextArea.setText(ContextHandler.getBBCode().check(BBCodeTextArea.getText()));
+        ContextHandler.getBBCode().check(BBCodeTextArea.getText());
     }//GEN-LAST:event_check2ActionPerformed
 
     private void convert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convert1ActionPerformed
