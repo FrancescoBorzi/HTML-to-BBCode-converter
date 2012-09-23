@@ -26,6 +26,8 @@ public class chosenColor extends javax.swing.JFrame
 
         chosenColorLabel.setText("Your chosen color:");
 
+        chosenColorTextField.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

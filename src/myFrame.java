@@ -5,6 +5,25 @@ import java.awt.event.*;
 
 public class myFrame extends javax.swing.JFrame implements Observer
 {
+    public static String getHTML()
+    {
+        return frame.HTMLTextArea.getText();
+    }
+    
+    public static String getBBCode()
+    {
+        return frame.BBCodeTextArea.getText();
+    }
+    
+    public static void setHTML(String newText)
+    {
+        frame.HTMLTextArea.setText(newText);
+    }
+    
+    public static void setBBCode(String newText)
+    {
+        frame.BBCodeTextArea.setText(newText);
+    }
 
     private static myFrame frame = new myFrame();
     
@@ -30,19 +49,19 @@ public class myFrame extends javax.swing.JFrame implements Observer
             
             if (ae.getActionCommand().compareTo(ImportHTML.getLabel()) == 0)
             {
-
+                FileFrame myFileChooser = new FileFrame(1);
             }
             else if (ae.getActionCommand().compareTo(ImportBBCode.getLabel()) == 0)
             {
-                
+                FileFrame myFileChooser = new FileFrame(2);
             }
             else if (ae.getActionCommand().compareTo(SaveHTML.getLabel()) == 0)
             {
-                
+                FileFrame myFileChooser = new FileFrame(3);
             }
             else if (ae.getActionCommand().compareTo(SaveBBCode.getLabel()) == 0)
             {
-                
+                FileFrame myFileChooser = new FileFrame(4);
             }
             else if (ae.getActionCommand().compareTo(Exit.getLabel()) == 0)
             {
@@ -153,6 +172,7 @@ public class myFrame extends javax.swing.JFrame implements Observer
         HTMLLabel.setText("HTML");
 
         HTMLTextArea.setColumns(20);
+        HTMLTextArea.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         HTMLTextArea.setRows(5);
         jScrollPane1.setViewportView(HTMLTextArea);
 
@@ -217,6 +237,7 @@ public class myFrame extends javax.swing.JFrame implements Observer
         BBCodeLabel.setText("BBCode");
 
         BBCodeTextArea.setColumns(20);
+        BBCodeTextArea.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         BBCodeTextArea.setRows(5);
         jScrollPane2.setViewportView(BBCodeTextArea);
 
