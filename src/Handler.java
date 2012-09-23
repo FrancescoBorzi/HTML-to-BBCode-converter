@@ -3,7 +3,7 @@ import java.util.*;
 public interface Handler
 {
     public String convert(String input);
-    public String check(String input);
+    public void check(String input);
 }
 
 class HTML implements Handler
@@ -26,9 +26,25 @@ class HTML implements Handler
         return bbcode;
     }
     
-    public String check(String input)
+    public void check(String input)
     {
-        return "TO DO";
+        int check = 0;
+        
+        for (int i = 0; i < input.length(); i++)
+        {
+            if (input.charAt(i) == '<')
+                check++;
+            else if (input.charAt(i) == '>')
+                check--;
+        }
+        
+        if (check != 0)
+        {
+            javax.swing.JOptionPane.showMessageDialog(null, "There are some errors in your code, please check it!", "HTML: Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        javax.swing.JOptionPane.showMessageDialog(null, "Everything's ok!", "HTML: OK", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }
 }
 
@@ -53,9 +69,25 @@ class BBCode implements Handler
 
     }
     
-    public String check(String input)
+    public void check(String input)
     {
-        return "TO DO";
+        int check = 0;
+        
+        for (int i = 0; i < input.length(); i++)
+        {
+            if (input.charAt(i) == '[')
+                check++;
+            else if (input.charAt(i) == ']')
+                check--;
+        }
+        
+        if (check != 0)
+        {
+            javax.swing.JOptionPane.showMessageDialog(null, "There are some errors in your code, please check it!", "BBCode: Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        javax.swing.JOptionPane.showMessageDialog(null, "Everything's ok!", "BBCode: OK", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }
     
 }

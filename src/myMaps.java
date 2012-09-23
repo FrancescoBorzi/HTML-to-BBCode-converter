@@ -6,7 +6,7 @@ public class myMaps
     {
         Map<String, String> htmlMap = new HashMap<String, String>();
         
-        /* lowcase */
+        /* lowercase */
 	
 	// br
         htmlMap.put("<br />", "\n");
