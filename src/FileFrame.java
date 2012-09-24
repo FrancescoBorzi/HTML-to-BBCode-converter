@@ -2,7 +2,8 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.*;
 
-public class FileFrame extends javax.swing.JFrame {
+public class FileFrame extends javax.swing.JFrame
+{
 
     private File myFile;
     private int mode;
@@ -58,7 +59,8 @@ public class FileFrame extends javax.swing.JFrame {
     private void FileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FileChooserActionPerformed
         myFile = FileChooser.getSelectedFile();
         this.setVisible(false);
-        try {
+        try
+        {
             String tmp = "";
             String line= "";
             BufferedReader reader;
@@ -95,7 +97,8 @@ public class FileFrame extends javax.swing.JFrame {
                     writer.close();
                     break;
             }
-        } catch (IOException e) {javax.swing.JOptionPane.showMessageDialog(null, "Cannot read file", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);}
+        }
+        catch (IOException e) {javax.swing.JOptionPane.showMessageDialog(null, "Cannot read file", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);}
     }//GEN-LAST:event_FileChooserActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

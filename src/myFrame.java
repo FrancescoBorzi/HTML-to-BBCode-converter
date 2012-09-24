@@ -369,9 +369,11 @@ public class myFrame extends javax.swing.JFrame implements Observer
             java.util.logging.Logger.getLogger(myFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() 
+        {
 
-            public void run() {
+            public void run()
+            {
                 getFrame();
             }
         });

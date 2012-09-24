@@ -19,7 +19,8 @@ class HTML implements Handler
     {
         String bbcode = input;
 
-        for (Map.Entry entry: myMaps.getHTMLMap().entrySet()) {
+        for (Map.Entry entry: myMaps.getHTMLMap().entrySet())
+        {
             bbcode = bbcode.replaceAll(entry.getKey().toString(), entry.getValue().toString());
         }
 
@@ -61,7 +62,8 @@ class BBCode implements Handler
     {
         String html = input;
 
-        for (Map.Entry entry: myMaps.getBBcodeMap().entrySet()) {
+        for (Map.Entry entry: myMaps.getBBcodeMap().entrySet())
+        {
             html = html.replaceAll(entry.getKey().toString(), entry.getValue().toString());
         }
 
