@@ -67,7 +67,13 @@ public class myMaps
         
         // images
         htmlMap.put("<img src='(.+?)' />", "\\[img\\]$1\\[/img\\]");
+        htmlMap.put("<img src=\"(.+?)\" />", "\\[img\\]$1\\[/img\\]");
         htmlMap.put("<img width='(.+?)' height='(.+?)' src='(.+?)' />", "\\[img=$1,$2\\]$3\\[/img\\]");
+        htmlMap.put("<img width=\"(.+?)\" height=\"(.+?)\" src=\"(.+?)\" />", "\\[img=$1,$2\\]$3\\[/img\\]");
+        htmlMap.put("<img src='(.+?)'>", "\\[img\\]$1\\[/img\\]");
+        htmlMap.put("<img src=\"(.+?)\">", "\\[img\\]$1\\[/img\\]");
+        htmlMap.put("<img width='(.+?)' height='(.+?)' src='(.+?)'>", "\\[img=$1,$2\\]$3\\[/img\\]");
+        htmlMap.put("<img width=\"(.+?)\" height=\"(.+?)\" src=\"(.+?)\">", "\\[img=$1,$2\\]$3\\[/img\\]");
         
         // links & mails
         htmlMap.put("<a href='mailto:(.+?)'>(.+?)</a>", "\\[email=$1\\]$2\\[/email\\]");;
@@ -80,6 +86,8 @@ public class myMaps
         htmlMap.put("<object width=\"(.+?)\" height=\"(.+?)\"><param name=\"(.+?)\" value=\"http://www.youtube.com/v/(.+?)\"></param><embed src=\"http://www.youtube.com/v/(.+?)\" type=\"(.+?)\" width=\"(.+?)\" height=\"(.+?)\"></embed></object>", "\\[youtube\\]$4\\[/youtube\\]");
         htmlMap.put("<video src='(.+?)' />", "\\[video\\]$1\\[/video\\]");
 	htmlMap.put("<video src=\"(.+?)\" />", "\\[video\\]$1\\[/video\\]");
+        htmlMap.put("<video src='(.+?)'>", "\\[video\\]$1\\[/video\\]");
+	htmlMap.put("<video src=\"(.+?)\">", "\\[video\\]$1\\[/video\\]");
 	
 	
 	/* UPPERCASE */
@@ -143,7 +151,13 @@ public class myMaps
         
         // IMAGES
         htmlMap.put("<IMG SRC='(.+?)' />", "\\[IMG\\]$1\\[/IMG\\]");
+        htmlMap.put("<IMG SRC=\"(.+?)\" />", "\\[IMG\\]$1\\[/IMG\\]");
         htmlMap.put("<IMG WIDTH='(.+?)' HEIGHT='(.+?)' SRC='(.+?)' />", "\\[IMG=$1,$2\\]$3\\[/IMG\\]");
+        htmlMap.put("<IMG WIDTH=\"(.+?)\" HEIGHT=\"(.+?)\" SRC=\"(.+?)\" />", "\\[IMG=$1,$2\\]$3\\[/IMG\\]");
+        htmlMap.put("<IMG SRC='(.+?)'>", "\\[IMG\\]$1\\[/IMG\\]");
+        htmlMap.put("<IMG SRC=\"(.+?)\">", "\\[IMG\\]$1\\[/IMG\\]");
+        htmlMap.put("<IMG WIDTH='(.+?)' HEIGHT='(.+?)' SRC='(.+?)'>", "\\[IMG=$1,$2\\]$3\\[/IMG\\]");
+        htmlMap.put("<IMG WIDTH=\"(.+?)\" HEIGHT=\"(.+?)\" SRC=\"(.+?)\">", "\\[IMG=$1,$2\\]$3\\[/IMG\\]");
         
         // LINKS & MAILS
         htmlMap.put("<A HREF='mailto:(.+?)'>(.+?)</A>", "\\[EMAIL=$1\\]$2\\[/EMAIL\\]");;
@@ -156,6 +170,8 @@ public class myMaps
         htmlMap.put("<OBJECT WIDTH=\"(.+?)\" HEIGHT=\"(.+?)\"><PARAM NAME=\"(.+?)\" VALUE=\"HTTP://WWW.YOUTUBE.COM/V/(.+?)\"></PARAM><EMBED SRC=\"http://www.youtube.com/v/(.+?)\" TYPE=\"(.+?)\" WIDTH=\"(.+?)\" HEIGHT=\"(.+?)\"></EMBED></OBJECT>", "\\[YOUTUBE\\]$4\\[/YOUTUBE\\]");
         htmlMap.put("<VIDEO SRC='(.+?)' />", "\\[VIDEO\\]$1\\[/VIDEO\\]");
 	htmlMap.put("<VIDEO SRC=\"(.+?)\" />", "\\[VIDEO\\]$1\\[/VIDEO\\]");
+        htmlMap.put("<VIDEO SRC='(.+?)'>", "\\[VIDEO\\]$1\\[/VIDEO\\]");
+	htmlMap.put("<VIDEO SRC=\"(.+?)\">", "\\[VIDEO\\]$1\\[/VIDEO\\]");
 		
         return htmlMap;
     }

@@ -50,14 +50,14 @@ class HTML implements Handler
         String links[] = URLchecks.findHTMLlinks(input);
         
         for (int i = 0; i < links.length; i++)
+        {
             if (!URLchecks.exists(links[i]))
             {
-                javax.swing.JOptionPane.showMessageDialog(null, "One or more links may be invalid.", "URL check", javax.swing.JOptionPane.ERROR_MESSAGE);
+                javax.swing.JOptionPane.showMessageDialog(null, "One or more links may be invalid.", "HTML URL check", javax.swing.JOptionPane.ERROR_MESSAGE);
                 return;
             }
+        }
                 
-                
-        
         javax.swing.JOptionPane.showMessageDialog(null, "Everything's ok!", "HTML: OK", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }
 }
@@ -100,6 +100,17 @@ class BBCode implements Handler
         {
             javax.swing.JOptionPane.showMessageDialog(null, "There are some errors in your code, please check it!", "BBCode: Error", javax.swing.JOptionPane.ERROR_MESSAGE);
             return;
+        }
+        
+        String links[] = URLchecks.findBBCodelinks(input);
+        
+        for (int i = 0; i < links.length; i++)
+        {
+            if (!URLchecks.exists(links[i]))
+            {
+                javax.swing.JOptionPane.showMessageDialog(null, "One or more links may be invalid.", "BBCode URL check", javax.swing.JOptionPane.ERROR_MESSAGE);
+                return;
+            }
         }
         
         javax.swing.JOptionPane.showMessageDialog(null, "Everything's ok!", "BBCode: OK", javax.swing.JOptionPane.INFORMATION_MESSAGE);
@@ -158,7 +169,11 @@ class URLchecks
                     input.substring(i, i+5).compareTo("src='") == 0 ||
                     input.substring(i, i+5).compareTo("src=\"") == 0 ||
                     input.substring(i, i+5).compareTo("ref='") == 0 ||
-                    input.substring(i, i+5).compareTo("ref=\"") == 0
+                    input.substring(i, i+5).compareTo("ref=\"") == 0 ||
+                    input.substring(i, i+5).compareTo("SRC='") == 0 ||
+                    input.substring(i, i+5).compareTo("SRC=\"") == 0 ||
+                    input.substring(i, i+5).compareTo("REF='") == 0 ||
+                    input.substring(i, i+5).compareTo("REF=\"") == 0
                     )
                 count++;
         }
@@ -174,7 +189,11 @@ class URLchecks
                     input.substring(position, position+5).compareTo("src='") == 0 ||
                     input.substring(position, position+5).compareTo("src=\"") == 0 ||
                     input.substring(position, position+5).compareTo("ref='") == 0 ||
-                    input.substring(position, position+5).compareTo("ref=\"") == 0
+                    input.substring(position, position+5).compareTo("ref=\"") == 0 ||
+                    input.substring(position, position+5).compareTo("SRC='") == 0 ||
+                    input.substring(position, position+5).compareTo("SRC=\"") == 0 ||
+                    input.substring(position, position+5).compareTo("REF='") == 0 ||
+                    input.substring(position, position+5).compareTo("REF=\"") == 0
                     )
                 {
                     position = position + 5;
@@ -189,6 +208,64 @@ class URLchecks
             }
         }
           
+        return links;
+    }
+    
+    public static String[] findBBCodelinks(String input)
+    {
+        String[] links;
+        
+        int count = 0;
+        
+        for (int i = 0; i < input.length()-5; i++)
+        {
+            if (
+                    input.substring(i, i+4).compareTo("url=") == 0 ||
+                    input.substring(i, i+4).compareTo("url]") == 0 ||
+                    input.substring(i, i+4).compareTo("img=") == 0 ||
+                    input.substring(i, i+4).compareTo("img]") == 0 ||
+                    input.substring(i, i+4).compareTo("deo]") == 0 ||
+                    input.substring(i, i+4).compareTo("URL=") == 0 ||
+                    input.substring(i, i+4).compareTo("URL]") == 0 ||
+                    input.substring(i, i+4).compareTo("IMG=") == 0 ||
+                    input.substring(i, i+4).compareTo("IMG]") == 0 ||
+                    input.substring(i, i+4).compareTo("DEO]") == 0
+                    )
+                count++;
+        }
+        
+        links = new String[count];
+        int position = 0;
+        
+        for (int i = 0; i < count; i++)
+        {
+            for (; position < input.length()-5; position++)
+            {
+                if (
+                    input.substring(position, position+4).compareTo("url=") == 0 ||
+                    input.substring(position, position+4).compareTo("url]") == 0 ||
+                    input.substring(position, position+4).compareTo("img=") == 0 ||
+                    input.substring(position, position+4).compareTo("img]") == 0 ||
+                    input.substring(position, position+4).compareTo("deo]") == 0 ||
+                    input.substring(position, position+4).compareTo("URL=") == 0 ||
+                    input.substring(position, position+4).compareTo("URL]") == 0 ||
+                    input.substring(position, position+4).compareTo("IMG=") == 0 ||
+                    input.substring(position, position+4).compareTo("IMG]") == 0 ||
+                    input.substring(position, position+4).compareTo("DEO]") == 0
+                    )
+                {
+                    position = position + 4;
+                    int pos2 = position + 1;
+                    while (input.charAt(pos2) != ']' && input.charAt(pos2) != '[')
+                        pos2++;
+                    
+                    links[i] = input.substring(position, pos2);
+                    position = pos2;
+                    break;
+                }
+            }
+        }
+        
         return links;
     }
 }
