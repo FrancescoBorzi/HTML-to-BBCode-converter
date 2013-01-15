@@ -124,7 +124,6 @@ public class myFrame extends javax.swing.JFrame implements Observer
         initComponents();
         initMenu();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setVisible(true);
         this.setResizable(false);
         this.setTitle("HTML-BBCode converter");
         this.setSize(myScreenSize.width/2, myScreenSize.height/2);
